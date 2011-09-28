@@ -1,0 +1,16 @@
+{
+    "name": "An example extension with an empty NPAPI plugin",
+    "version": "1.0",
+    "description": "An extension to illustrate bug #98418",
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content_script.js"],
+        "run_at": "document_start"
+    }],
+    "permissions": [
+        "<all_urls>"
+    ],
+    "plugins": [
+        { "path": "plugins/empty_file_as_plugin.so", "public": false }
+    ]
+}
